@@ -1,0 +1,20 @@
+
+
+  
+ngb-rating {
+    color:aqua;
+    font-size: 30px;
+  }
+  
+  /* Styles for the filled stars */
+  ngb-rating  {
+    content: "\2605"; /* Unicode for filled star (★) */
+    color: #FFC107; /* Color for filled stars */
+  }
+  
+  /* Styles for the empty stars */
+  ngb-rating ::after {
+    content: "\2606"; /* Unicode for empty star (☆) */
+    color: blue; /* Color for empty stars */
+  }
+  

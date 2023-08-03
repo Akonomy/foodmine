@@ -1,0 +1,86 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Style the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style the logo */
+.Logo {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Style the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+    position: relative;
+}
+
+
+
+
+/* Style the dropdown menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.menu-container:hover .menu {
+    display: block;
+}
+
+/* Style the cart span */
+li span {
+    background-color: #fff;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Add more styles as needed */
+
+/* Style the links in the navigation */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+/* Style the active link in the navigation */
+nav ul li a.router-link-active {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Add hover effect for links */
+nav ul li a:hover {
+    background-color: #555;
+}
