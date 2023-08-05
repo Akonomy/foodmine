@@ -71,7 +71,7 @@ export const sample_foods: Food[]=[
       {
         id: '7',
         name: 'Mici Combo',
-        price: 11.00,
+        price: 110.00,
         tags: ['Grill', 'Traditional', 'Romanian'],
         favorite: true,
         stars: 4.8,

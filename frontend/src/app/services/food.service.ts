@@ -32,6 +32,13 @@ getAllFoodsByTag(tag:string):Food[]{
   this.getAll().filter(food => food.tags?.includes(tag))
 }
 
+getAllFoodsById(foodId:string):Food{
+return this.getAll().find(food => food.id == foodId) ?? new Food();
+
+}
+
+
+
 
 
 

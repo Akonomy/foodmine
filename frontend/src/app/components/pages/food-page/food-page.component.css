@@ -1,0 +1,184 @@
+/* food-details.component.css */
+
+.food-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Smaller box */
+  }
+  
+  .food-image {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners for the image */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .food-image img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .food-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .favorite {
+    position: relative;
+    top: 10px;
+    right: -50px; /* Increase the right distance to move the heart more to the right */
+    font-size: 50px;
+    color: red;
+  }
+  
+  .favorite.not {
+    color: gray;
+  }
+ 
+  
+  
+  
+  
+  
+  
+  .food-details {
+    flex: 2;
+  }
+  
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .food-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .stars {
+    font-size: 32px; /* Increase the size of the stars */
+    color: #FFC107;
+  }
+  
+
+  
+  
+  .origins {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .origins span {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+  .cook-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cook-time span {
+    margin-right: 5px;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tag {
+    padding: 5px 10px;
+    background-color: #0c703e;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+   /* Style for the tags */
+   .tag{
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #0c703e;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the tags */
+  .tag:hover {
+    background-color: #21aa65;
+  }
+  
+  
+
+.cart {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cart button {
+    background-color: salmon;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart button:hover {
+    background-color: #ff6347;
+  }
+  
+  
+  
+  
+  
+  
+  
