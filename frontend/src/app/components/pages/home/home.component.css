@@ -24,6 +24,7 @@ ngb-rating {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
   
   li {
@@ -34,7 +35,8 @@ ngb-rating {
     padding: 10px;
     display: flex;
     flex-direction: row;
-   
+    justify-content: center; /* Added: Center horizontally */
+    align-items: center; /* Added: Center vertically */
   }
   
  
@@ -69,6 +71,7 @@ ngb-rating {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+    
   }
   
   .contents {
@@ -126,6 +129,7 @@ ngb-rating {
     font-size: 18px;
     font-weight: bold;
     color: green;
+   
   }
   
   

@@ -1,11 +1,12 @@
 import {Food} from './app/shared/models/Food';
+import { Tag } from './app/shared/models/Tag';
 
 export const sample_foods: Food[]=[
     {
       id: '1',
       name: 'Pizza Margherita',
       price: 12.99,
-      tags: ['Pizza', 'Italian'],
+      tags: ['Pizza', 'Italian',],
       favorite: false,
       stars: 4,
       imageUrl: 'assets/food-pizza_magherita.jpeg',
@@ -16,7 +17,7 @@ export const sample_foods: Food[]=[
       id: '2',
       name: 'Burger Deluxe',
       price: 9.99,
-      tags: ['Burger', 'American'],
+      tags: ['Burger', 'American','Fast Food'],
       favorite: true,
       stars: 5,
       imageUrl: 'assets/food-burger_deluxe.jpeg',
@@ -81,4 +82,14 @@ export const sample_foods: Food[]=[
     // Add more food items as needed
   ];
 
-  
+
+  export const sample_tags: Tag[] = [
+    { name: 'All', count: 7 },
+    { name: 'Fast Food', count: 1 },
+    { name: 'Italian', count: 1 },
+    { name: 'American', count: 1 },
+    { name: 'Japanese', count: 1 },
+    { name: 'Traditional', count: 4 },
+    { name: 'Romanian', count: 4 },
+    // Add more tags as needed
+  ];

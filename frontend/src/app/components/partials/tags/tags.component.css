@@ -1,0 +1,25 @@
+/* Style for the tags container */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for the tags */
+  .tags-container a {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #0c703e;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the tags */
+  .tags-container a:hover {
+    background-color: #21aa65;
+  }
+  
