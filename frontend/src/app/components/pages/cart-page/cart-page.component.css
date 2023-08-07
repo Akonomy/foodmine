@@ -1,0 +1,163 @@
+/* cart.component.css */
+
+/* Center align the page content */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .remove_button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove_button:hover {
+    background-color: #ff6347a6;
+  }
+  
+  .checkout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .food-count,
+  .total-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .checkout-container a {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-container a:hover {
+    background-color: #0056b3;
+  }
+  
+  .food-image img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.food-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.quantity {
+  margin-top: 5px;
+}
+
+.quantity label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-right: 5px;
+}
+
+.quantity select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Apply styles to the input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Style the input element */
+  .input-container input[type="number"] {
+    width: 50px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+  }
+  
+  /* Add some margin to the quantity label */
+  .input-container p {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  
+
+  .empty-cart-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #555;
+}

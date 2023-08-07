@@ -1,1 +1,50 @@
-<p>cart-page works!</p>
+<app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+
+<div  class="cart-container">
+
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+
+            <div > <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+            
+            </div>
+
+            <div>
+                <a routerLink="/food/{{cartItem.food.id}}">{{cartItem.food.name}}</a>
+            </div>
+
+            <div class="input-container">
+
+                <input #quantitySelect  type="number" min="1" max="100" [value]="cartItem.quantity" (input)="cartItem.quantity" 
+                (change)="changeQuantity(cartItem,quantitySelect.value)">
+                <p>Selected quantity: {{ cartItem.quantity }}</p>
+   
+            </div>
+
+           
+
+            <div>
+                 {{cartItem.price | currency}}
+            </div>
+
+            <div>
+                <button class="remove_button" (click)="removeFromCart(cartItem)">Remove</button>
+            </div>
+
+        </li>
+    </ul>
+
+    <div *ngIf="cart.totalCount" class="checkout-container" >
+        <div>
+            <div class="food-count">Count :  {{cart.totalCount }}</div>
+            <div class="total-price">Price  :  {{cart.totalPrice | currency}} </div>
+
+        </div>
+
+        <a routerLink="/checkout" >Proceed to checkout</a>
+    </div>
+</div>
+
+<div *ngIf="cart.totalCount === 0" class="empty-cart-message">
+    Your cart is empty.
+</div>
