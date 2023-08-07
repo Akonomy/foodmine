@@ -1,4 +1,12 @@
 <app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-not-found
+[visible]="!cart || !cart.items.length"
+notFoundMessage="Cart is empty"
+resetLinkText="Go to homepage"
+>
+
+
+</app-not-found>
 
 <div  class="cart-container">
 
@@ -45,6 +53,6 @@
     </div>
 </div>
 
-<div *ngIf="cart.totalCount === 0" class="empty-cart-message">
+<div *ngIf="cart.totalCount === -1" class="empty-cart-message">
     Your cart is empty.
 </div>

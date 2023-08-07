@@ -12,8 +12,8 @@ export class TitleComponent implements OnInit{
   @Input()
   title!:string;
 
-  @Input()
-  margin?="1 rem 0 1rem 0.2rem"; //doc 
+  //@Input()
+  //margin?="1 rem 0 1rem 0.2rem"; //doc 
 
 
   @Input()

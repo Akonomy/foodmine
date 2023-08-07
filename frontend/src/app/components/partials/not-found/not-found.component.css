@@ -1,0 +1,29 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.message {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.reset-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgb(250, 128, 114);
+  border-radius: 25px; /* More round corners */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.reset-link:hover {
+  background-color: rgba(250, 128, 114, 0.685);
+}
