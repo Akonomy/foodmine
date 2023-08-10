@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000"  //local host for dev, 
+const BASE_URL = "http://localhost:5000/"  //local host for dev, 
 
 export const FOODS_URL = BASE_URL + "api/foods";
 export const FOODS_TAGS_URL = BASE_URL + "api/foods/tags"; //poti pune si FOODS_URL +   "/tags" ;   :))
