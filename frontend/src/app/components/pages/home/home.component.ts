@@ -1,4 +1,4 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FoodService } from 'src/app/services/food.service';
@@ -9,30 +9,30 @@ import { Food } from 'src/app/shared/models/Food';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
-  foods:Food[] = [];
-  constructor(private foodService:FoodService, activatedRoute:ActivatedRoute){
-    let foodsObservable:Observable<Food[]>;
+  foods: Food[] = [];
 
-    activatedRoute.params.subscribe((params) => {
-      if(params.searchTerm)
-      foodsObservable =this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
+  constructor(
+    private foodService: FoodService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-      else if (params.tag)
-      foodsObservable = foodService.getAllFoodsByTag(params.tag)
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe((params) => {
+      let foodsObservable: Observable<Food[]>;
 
-      else
-      foodsObservable = foodService.getAll();
+      if (params.searchTerm) {
+        foodsObservable = this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
+      } else if (params.tag) {
+        foodsObservable = this.foodService.getAllFoodsByTag(params.tag);
+      } else {
+        foodsObservable = this.foodService.getAll();
+      }
 
-
-      foodsObservable.subscribe((serverFoods) => {this.foods = serverFoods; })
-
-      
-    })
-    
+      foodsObservable.subscribe((serverFoods) => {
+        this.foods = serverFoods;
+      });
+    });
   }
-
-  ngOnInit():void{}
-
 }

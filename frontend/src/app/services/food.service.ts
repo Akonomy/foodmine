@@ -37,7 +37,7 @@ getAllFoodsByTag(tag:string): Observable<Food[]>{
 }
 
 
-getFoodById(foodId:string):Observable<Food>{
+getFoodsById(foodId:string):Observable<Food>{
     return this.http.get<Food>(FOOD_BY_ID_URL + foodId);
 
 }
