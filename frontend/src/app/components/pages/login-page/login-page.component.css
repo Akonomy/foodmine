@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffffe0;
+  }
+  
+  .details {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Redus lățimea cutiei */
+    text-align: center; /* Centrat textul */
+    margin-top: -50px; /* Repozitionează cutia pe mijloc */
+  }
+  
+  .app-title {
+    color: salmon;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 10px; /* Mai puțin spațiu pentru padding */
+    font-size: 16px;
+    color: #313e41;
+    margin-bottom: 10px; /* Mai puțin spațiu între câmpuri */
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    box-shadow: inset 0 0 5px salmon;
+  }
+  
+  .error-list {
+    margin-top: 5px;
+    list-style-type: none;
+    padding-left: 0;
+    color: salmon;
+  }
+  
+  .button {
+    text-align: center;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: salmon;
+    transition-duration: 0.3s;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    transform: scale(1.1);
+  }
+  
