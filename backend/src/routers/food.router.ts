@@ -2,6 +2,9 @@ import {Router} from 'express';
 import { sample_foods, sample_tags } from '../data';
 import asyncHandler from 'express-async-handler';
 import { FoodModel } from '../models/food.model';
+
+import mongoose from 'mongoose';
+
 const router = Router();
 
 router.get("/seed", asyncHandler(
@@ -71,12 +74,28 @@ router.get("/tag/:tagName",asyncHandler(
   }
 ))
 
+
+
 router.get("/:foodId", asyncHandler(
   async (req, res) => {
-    const food = await FoodModel.findById(req.params.foodId);
-    res.send(food);
+    try {
+      const foodId = req.params.foodId;
+      console.log("Food ID:", foodId);
+
+      const food = await FoodModel.findOne({ id: foodId });
+      if (!food) {
+        console.log("Food not found");
+        res.status(404).send("Food not found");
+        return;
+      }
+
+      console.log("Retrieved food:", food);
+      res.send(food);
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).send("Internal server error");
+    }
   }
 ))
-
 
 export default router;

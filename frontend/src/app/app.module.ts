@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 
 
@@ -35,6 +36,7 @@ import { InputContainerComponent } from './components/partials/input-container/i
     NotFoundComponent,
     LoginPageComponent,
     InputContainerComponent,
+    RegisterPageComponent,
   ],
   imports: [
     BrowserModule,

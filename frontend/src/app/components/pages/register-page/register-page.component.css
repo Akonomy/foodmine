@@ -1,7 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Așezat cutia deasupra centrului vertical */
     height: 100vh;
     background-color: #ffffffe0;
   }
@@ -11,9 +11,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px; /* Redus lățimea cutiei */
-    text-align: center; /* Centrat textul */
-    margin-top: -50px; /* Repozitionează cutia pe mijloc */
+    width: 300px;
+    text-align: center;
   }
   
   .app-title {
@@ -22,7 +21,7 @@
     margin-bottom: 20px;
   }
   
-  .input-container {
+  input-container {
     margin-bottom: 15px;
   }
   
@@ -34,44 +33,47 @@
     margin-bottom: 5px;
   }
   
+  input[type="text"],
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  textarea {
     display: block;
     width: 100%;
     height: 40px;
     border-radius: 5px;
     border: none;
     outline: none;
-    padding: 0 10px; /* Mai puțin spațiu pentru padding */
+    padding: 10px; /* Ajustat spațiul pentru padding */
+    margin-bottom: 10px; /* Adăugat un mic spațiu între câmpuri */
     font-size: 16px;
     color: #313e41;
-    margin-bottom: 10px; /* Mai puțin spațiu între câmpuri */
   }
   
+  input[type="text"]:focus,
   input[type="email"]:focus,
-  input[type="password"]:focus {
+  input[type="password"]:focus,
+  textarea:focus {
     box-shadow: inset 0 0 5px salmon;
   }
   
   .error-list {
-    margin-top: 5px;
-    list-style-type: none;
-    padding-left: 0;
-    color: salmon;
+    color: red;
+    font-size: 14px; /* Redus mărimea fontului pentru a încadra mai bine */
   }
   
   .button {
     text-align: center;
+    margin-top: 15px; /* Adăugat spațiu deasupra butonului */
   }
   
   button[type="submit"] {
     width: 100%;
-    height: 50px;
-    border-radius: 10px;
+    height: 40px; /* Redus înălțimea butonului */
+    border-radius: 5px; /* Redus raza de la 10px la 5px */
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px; /* Redus mărimea fontului pentru a încadra mai bine */
     font-weight: bold;
     color: #fff;
     background-color: salmon;
@@ -80,24 +82,5 @@
   
   button[type="submit"]:hover,
   button[type="submit"]:focus {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Redus valoarea de scalare */
   }
-  
-
-  .register-link {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .register-link a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
-  }
-
-  

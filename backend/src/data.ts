@@ -16,7 +16,7 @@ export const sample_foods: any[]=[
       id: '2b',
       name: 'Burger Deluxe',
       price: 9.99,
-      tags: ['Burger', 'American','Fast Food'],
+      tags: ['Burger', 'American','FastFood'],
       favorite: true,
       stars: 5,
       imageUrl: 'assets/food-burger_deluxe.jpeg',
