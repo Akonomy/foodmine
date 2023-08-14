@@ -2,7 +2,7 @@
 
 export const sample_foods: any[]=[
     {
-      id: '1',
+      id: '1a',
       name: 'Pizza Margherita',
       price: 12.99,
       tags: ['Pizza', 'Italian',],
@@ -13,7 +13,7 @@ export const sample_foods: any[]=[
       cookTime: '30 minutes',
     },
     {
-      id: '2',
+      id: '2b',
       name: 'Burger Deluxe',
       price: 9.99,
       tags: ['Burger', 'American','Fast Food'],
@@ -24,7 +24,7 @@ export const sample_foods: any[]=[
       cookTime: '20 minutes',
     },
     {
-      id: '3',
+      id: '3c',
       name: 'Sushi Combo',
       price: 18.50,
       tags: ['Sushi', 'Japanese'],
@@ -35,7 +35,7 @@ export const sample_foods: any[]=[
       cookTime: '40 minutes',
     },
     {
-        id: '4',
+        id: 'easter_egg',
         name: 'Sarmale',
         price: 16.25,
         tags: ['Traditional', 'Romanian'],
@@ -78,6 +78,72 @@ export const sample_foods: any[]=[
         origin: ['Romania'],
         cookTime: '30 minutes',
       },
+      {
+      id:'8',
+    name: 'Pizza Pepperoni',
+    cookTime: '10-20',
+    price: 10,
+    favorite: false,
+    origins: ['italy'],
+    stars: 4.5,
+    imageUrl: 'assets/food-pizza_peperoni.jpeg',
+    tags: ['FastFood', 'Pizza', 'Lunch'],
+  },
+  {
+    id:'9',
+    name: 'Meatball',
+    price: 20,
+    cookTime: '20-30',
+    favorite: true,
+    origins: ['persia', 'middle east', 'china'],
+    stars: 4.7,
+    imageUrl: 'assets/food-meatball.jpeg',
+    tags: ['SlowFood', 'Lunch'],
+  },
+  {
+    id:'10',
+    name: 'Hamburger',
+    price: 5,
+    cookTime: '10-15',
+    favorite: false,
+    origins: ['germany', 'us'],
+    stars: 3.5,
+    imageUrl: 'assets/food-hamburger.jpeg',
+    tags: ['FastFood', 'Hamburger'],
+  },
+  {
+    id:'11',
+    name: 'Fried Potatoes',
+    price: 2,
+    cookTime: '15-20',
+    favorite: true,
+    origins: ['belgium', 'france'],
+    stars: 3.3,
+    imageUrl: 'assets/food-cartofi_prajiti.jpeg',
+    tags: ['FastFood', 'Fry'],
+  },
+  {
+    id:'12',
+    name: 'Chicken Soup',
+    price: 11,
+    cookTime: '40-50',
+    favorite: false,
+    origins: ['india', 'asia'],
+    stars: 3.0,
+    imageUrl: 'assets/food-supa_de_pui.jpeg',
+    tags: ['SlowFood', 'Soup'],
+  },
+  {
+    id:'13',
+    name: 'Vegetables Pizza',
+    price: 9,
+    cookTime: '40-50',
+    favorite: false,
+    origins: ['italy'],
+    stars: 4.0,
+    imageUrl: 'assets/food-pizza_vegetala.jpeg',
+    tags: ['FastFood', 'Pizza', 'Lunch'],
+  },
     // Add more food items as needed
   ];
 
@@ -95,6 +161,7 @@ export const sample_foods: any[]=[
 
   export const sample_users: any[] = [
     {
+      
       name: "John Doe",
       email: "john@gmail.com",
       password: "12345",
@@ -102,6 +169,7 @@ export const sample_foods: any[]=[
       isAdmin: true,
     },
     {
+      
       name: "Jane Doe",
       email: "Jane@gmail.com",
       password: "12345",
