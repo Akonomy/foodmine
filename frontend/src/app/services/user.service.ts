@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
-import { IUserRegister } from '../shared/interfaces/IUserRegister';
+import { IUserRegister } from '../shared/interfaces/IUsserRegister';
 import { User } from '../shared/models/User';
 
 const USER_KEY = 'User';
