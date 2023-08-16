@@ -35,7 +35,7 @@ export class FoodPageComponent implements OnInit {
   addToCart(){
 
     this.cartService.addToCart(this.food);
-    this.router.navigateByUrl("/cart-page")
+    this.router.navigateByUrl("/")  //modify where is redirect if click on add to cart
   }
 
 }

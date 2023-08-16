@@ -65,6 +65,10 @@ return this.cartSubject.asObservable();
 
 }
 
+getCart(): Cart{
+  return this.cartSubject.value;
+}
+
 
 //now for local storage
 
