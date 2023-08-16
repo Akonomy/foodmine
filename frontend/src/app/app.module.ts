@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -19,7 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './components/partials/input-container/input-container.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
-
+import { LoadingComponent } from './components/partials/loading/loading.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 
 
@@ -37,6 +38,8 @@ import { RegisterPageComponent } from './components/pages/register-page/register
     LoginPageComponent,
     InputContainerComponent,
     RegisterPageComponent,
+    LoadingComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,9 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

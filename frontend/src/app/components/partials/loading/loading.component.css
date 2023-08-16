@@ -1,0 +1,59 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center the content vertically and horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Create the red fry container */
+.fry-box {
+  position: relative;
+  width: 150px;
+  height: 350px;
+  background-color: #9e0707; /* Red color */
+  border: 2px solid #ccc;
+  border-radius: 100px 50px 100px 50px;
+  overflow: hidden;
+}
+
+/* Create the fries */
+.fries {
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  background-color: #f4c542;
+  top: -60px; /* Start above the fry box */
+  left: 50%; /* Start in the middle of the fry box */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+  animation: fall 2s infinite;
+}
+
+
+.vertical_text {
+  writing-mode: vertical-rl; /* Vertical writing mode */
+  text-orientation: mixed; /* Preserve upright orientation */
+  white-space: nowrap; /* Prevent text from wrapping */
+  transform: rotate(180deg); /* Rotate the text 180 degrees */
+}
+
+/* Keyframes animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  50% {
+    transform: translateY(250px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(510px) rotate(10deg);
+  }
+}
