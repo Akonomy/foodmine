@@ -176,9 +176,39 @@
     background-color: #ff6347;
   }
   
+  .confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; /* Increased padding for a more spacious look */
+    background-color: #65a34c; /* Beige-ish off-white background */
+    color: black; /* Black text color */
+    border: 1px solid #084728; /* Beige border with a subtle glow */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); /* Glowing shadow */
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 5s forwards;
+    z-index: 9999;
+  }
   
-  
-  
-  
-  
+  .confirmation a {
+    color: salmon; /* Salmon link color */
+    text-decoration: underline;
+  }
+
+  @keyframes fadeInOut {
+    0% ,100%{
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+
+    85% {
+      opacity: 1;
+    }
+
+  }
   

@@ -1,9 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { FoodService } from 'src/app/services/food.service';
 import { Food } from 'src/app/shared/models/Food';
-//import { Tag } from 'src/app/shared/models/Tag';
 
 @Component({
   selector: 'app-food-page',
@@ -11,34 +10,37 @@ import { Food } from 'src/app/shared/models/Food';
   styleUrls: ['./food-page.component.css']
 })
 export class FoodPageComponent implements OnInit {
-  food!:Food;
- // tags?:Tag[];
+  food!: Food;
+  showConfirmation = false; // Track whether to show the confirmation message
 
-
-    
- 
-  constructor( activatedRoute:ActivatedRoute, foodService:FoodService , private cartService:CartService,
-    private router:Router ){
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private foodService: FoodService,
+    private cartService: CartService,
+    private router: Router
+  ) {
     activatedRoute.params.subscribe((params) => {
-      if (params.id)
-      foodService.getFoodsById(params.id).subscribe(serverFood => {
-        this.food = serverFood;
-      });
-
-      //this.tags =foodService.getAllTags();
-    })
-
+      if (params.id) {
+        foodService.getFoodsById(params.id).subscribe(serverFood => {
+          this.food = serverFood;
+        });
+      }
+    });
   }
 
-  ngOnInit():void{}
+  ngOnInit(): void {}
 
-  addToCart(){
-
+  addToCart() {
     this.cartService.addToCart(this.food);
-    this.router.navigateByUrl("/")  //modify where is redirect if click on add to cart
+
+    // Show the confirmation message and hide it after 3 seconds
+    this.showConfirmation = true;
+    setTimeout(() => {
+      this.showConfirmation = false;
+    }, 3000);
+
+    // You can modify where the router navigates after adding to cart
+    // For example, redirect to the cart page
+    //this.router.navigateByUrl('/cart');
   }
-
 }
-
-
-

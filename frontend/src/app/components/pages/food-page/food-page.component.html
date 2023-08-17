@@ -8,9 +8,16 @@ resetLinkText="Back to homepage?">
 </app-not-found>
 
 
-
-
+<div *ngIf="showConfirmation" class="confirmation">
+  <p>Added to cart!</p>
+  <p>Product: {{ food.name }}</p>
+  <p>Price: {{ food.price | currency }}</p>
+  <p><a routerLink="/cart-page">Go to Cart</a></p>
+</div>
 <div *ngIf="food" class="food-container">
+  
+
+
     <img [src]="food.imageUrl" [alt]="food.name" class="food-image" />
     <div class="details">
       <div class="header">

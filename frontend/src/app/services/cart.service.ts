@@ -14,21 +14,32 @@ export class CartService {
     constructor() { }
 
 
-addToCart(food:Food):void{
-  //console.log("Addto cart() is running.");
+    changeQuantity(foodId:string , quantity:number){
 
-  let cartItem = this.cart.items
-  .find(item => item.food.id === food.id);
-  if (cartItem)
-  cartItem.quantity++;
+      let cartItem =this.cart.items.find( item => item.food.id === foodId);
+      if (!cartItem) return ;
+    
+      cartItem.quantity=quantity;
+      cartItem.price= quantity * cartItem.food.price
+      this.setCartToLocalStorage();
+    }
+    
 
-  else{
-  this.cart.items.push(new CartItem(food));
-  }
-
-  this.setCartToLocalStorage();
-
-}
+    
+    addToCart(food: Food): void {
+      let cartItem = this.cart.items.find(item => item.food.id === food.id);
+      
+      if (cartItem) {
+        cartItem.quantity++;
+        cartItem.price = cartItem.food.price * cartItem.quantity; // Update the price
+      } else {
+        cartItem = new CartItem(food);
+        this.cart.items.push(cartItem);
+      }
+    
+      this.changeQuantity(cartItem.food.id, cartItem.quantity)
+      this.setCartToLocalStorage(); // Save the updated cart to local storage
+    }
 
 
 removeFromCart(foodId:string):void{
@@ -37,16 +48,6 @@ removeFromCart(foodId:string):void{
 
 }
 
-
-changeQuantity(foodId:string , quantity:number){
-
-  let cartItem =this.cart.items.find( item => item.food.id === foodId);
-  if (!cartItem) return ;
-
-  cartItem.quantity=quantity;
-  cartItem.price= quantity * cartItem.food.price
-  this.setCartToLocalStorage();
-}
 
 
 
