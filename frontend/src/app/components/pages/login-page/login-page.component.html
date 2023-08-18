@@ -1,34 +1,33 @@
 <div class="container">
-    <div class="details">
-      <app-title title="Login"></app-title>
-  
-      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <div class="details">
+    <app-title title="Login"></app-title>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
       <div class="input-container">
-        <label>Email</label>
-        <div>
-          <input type="email" placeholder="Email" formControlName="email"/>
+        <label class="label">Email</label>
+        <div class="input-wrapper">
+          <input class="input" type="email" placeholder="Email" formControlName="email"/>
         </div>
         <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-          <div *ngIf="fc.email.errors.required">Should not be empty</div>
-          <div *ngIf="fc.email.errors.email">Email is not correct</div>
+          <div *ngIf="fc.email.errors.required" class="error-message">Should not be empty</div>
+          <div *ngIf="fc.email.errors.email" class="error-message">Email is not correct</div>
         </div>
       </div>
-  
+
       <div class="input-container">
-        <label>Password</label>
-        <div>
-          <input type="password" placeholder="Password"
-          formControlName="password"/>
+        <label class="label">Password</label>
+        <div class="input-wrapper">
+          <input class="input" type="password" placeholder="Password" formControlName="password"/>
         </div>
         <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-          <div *ngIf="fc.password.errors.required">Should not be empty</div>
+          <div *ngIf="fc.password.errors.required" class="error-message">Should not be empty</div>
         </div>
       </div>
-  
+
       <div class="button">
-        <button type="submit">Login</button>
+        <button type="submit" class="submit-button">Login</button>
       </div>
-      </form>
-      <p class="register-link">Don't have an account? <a routerLink="/register">Register</a></p>
-    </div>
+    </form>
+    <p class="register-link">Don't have an account? <a class="register-link" routerLink="/register">Register</a></p>
   </div>
+</div>

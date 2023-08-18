@@ -23,6 +23,7 @@ import { LoadingComponent } from './components/partials/loading/loading.componen
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 
 
@@ -62,6 +63,7 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
 
   ],
   providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true },
     {provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
