@@ -24,6 +24,8 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 
 
 
@@ -44,6 +46,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     LoadingComponent,
     CheckoutPageComponent,
     OrderItemsListComponent,
+    PaymentPageComponent,
+    PaypalButtonComponent,
     
   ],
   imports: [
