@@ -34,7 +34,7 @@ export class PaypalButtonComponent implements OnInit {
           purchase_units: [
             {
               amount: {
-                currency_code: 'USD',
+                currency_code: 'CAD',
                 value: self.order.totalPrice,
               },
             },
@@ -49,7 +49,7 @@ export class PaypalButtonComponent implements OnInit {
           {
             next: (orderId) => {
               this.cartService.clearCart();
-              this.router.navigateByUrl('/track/' + orderId);
+              this.router.navigateByUrl('/order/' + orderId);
               this.toastrService.success(
                 'Payment Saved Successfully',
                 'Success'

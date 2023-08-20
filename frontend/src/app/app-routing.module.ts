@@ -8,6 +8,7 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { AuthGuard } from './auth/guards/auth.guard';
+import { OrderPageComponent } from './components/pages/order-page/order-page.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'register', component: RegisterPageComponent},
   {path:'checkout', component: CheckoutPageComponent, canActivate:[AuthGuard]},
   {path:'payment-page', component: PaymentPageComponent, canActivate:[AuthGuard]},
+  {path:'order/:orderId', component: OrderPageComponent, canActivate:[AuthGuard]},
   
 ];
 

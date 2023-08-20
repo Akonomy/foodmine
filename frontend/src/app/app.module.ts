@@ -26,6 +26,7 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
+import { OrderPageComponent } from './components/pages/order-page/order-page.component';
 
 
 
@@ -48,6 +49,7 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
     OrderItemsListComponent,
     PaymentPageComponent,
     PaypalButtonComponent,
+    OrderPageComponent,
     
   ],
   imports: [

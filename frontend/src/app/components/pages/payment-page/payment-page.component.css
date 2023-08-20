@@ -9,7 +9,7 @@
     color: #ffffff;
     padding: 20px;
   }
-  
+
   /* Content styles */
   .content {
     display: flex;
@@ -18,7 +18,7 @@
     width: 100%;
     margin-bottom: 20px;
   }
-  
+
   /* Summary styles */
   .summary {
     display: grid;
@@ -32,17 +32,17 @@
     box-shadow: 0 0 10px #444;
     background-color: #232323; /* Dark blue similar to order table */
   }
-  
+
   /* Order details styles */
   h3 {
     margin-bottom: 5px;
     font-size: 1rem; /* Smaller font size */
   }
-  
+
   span {
     font-size: 1.5rem; /* Bigger font size for values */
   }
-  
+
   /* Payment form styles */
   .payment-form {
     display: flex;
@@ -55,18 +55,18 @@
     box-shadow: 0 0 10px #555;
     background-color: #232323; /* Dark blue similar to order table */
   }
-  
+
   /* Page title styles */
   .page-title {
     font-size: 1.6rem;
     margin-bottom: 20px;
   }
-  
+
   /* Form element styles */
   form {
     width: 100%;
   }
-  
+
   label,
   input {
     display: block;
@@ -79,7 +79,7 @@
     color: #ffffff;
     font-size: 1rem;
   }
-  
+
   /* Button styles */
   button {
     display: block;
@@ -93,18 +93,18 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
-  
+
   button:hover {
     background-color: #e68a00;
   }
-  
+
   button:active {
     animation-name: pulse;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }
-  
+
   .order-items-list {
     background-color: #232323; /* Dark blue similar to summary and payment form */
     border: 2px solid #444;
@@ -114,7 +114,7 @@
     padding: 10px;
     width: 100%; /* Make the table wider */
   }
-  
+
   /* Keyframes for pulse animation */
   @keyframes pulse {
     from {
@@ -131,7 +131,7 @@
     margin-top: 20px;
     width: 80%;
   }
-  
+
   /* PayPal button styles */
   .paypal-button {
     width: 100%; /* Adjust the width as needed */
@@ -144,15 +144,15 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
-  
+
   .paypal-button:hover {
     background-color: #e68a00;
   }
-  
+
   .paypal-button:active {
     animation-name: pulse;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }
-  
+
