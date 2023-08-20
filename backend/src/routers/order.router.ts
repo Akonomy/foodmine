@@ -3,7 +3,9 @@ import asyncHandler from 'express-async-handler';
 import { HTTP_BAD_REQUEST } from '../constants/http_status';
 import { OrderStatus } from '../constants/order_status';
 import { OrderModel } from '../models/order.model';
+
 import auth from '../middlewares/auth.mid';
+//import { UserModel } from '../models/user.model';
 
 const router = Router();
 router.use(auth);
@@ -55,8 +57,20 @@ router.get('/order/:id', asyncHandler( async (req, res) => {
     res.send(order);
 }))
 
+
+router.get('/userOrders/:userId', asyncHandler(async (req, res) => {
+    const orders = await getAllOrdersForUserId(req.params.userId);
+    res.send(orders);
+}));
+
+
 export default router;
 
 async function getNewOrderForCurrentUser(req: any) {
     return await OrderModel.findOne({ user: req.user.id, status: OrderStatus.NEW });
+}
+
+
+async function getAllOrdersForUserId(userId: string) {
+    return await OrderModel.find({ user: userId });
 }
