@@ -2,8 +2,13 @@
     "name": "ako-foodpage",
     "version": "1.0.0",
     "scripts": {
-        "start": "cd backend/built && node server.js",
-        "prebuild": "cd backend && npm run build",
-        "build": "cd frontend && npm run build"
+        "start": "cd backend/built && node server.js",    
+        "prebuild": "cd backend && npm run build", 
+        "build": "cd frontend && npm run build",
+        "postbuild": "ncp frontend/build backend/built/public" 
+    },
+    "engines": {
+      "node": "14.17.6", 
+      "npm": "6.14.15" 
     }
 }
