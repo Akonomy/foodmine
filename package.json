@@ -6,7 +6,6 @@
       "install-all": "cd backend && npm install && cd ../frontend && npm install",   
       "prebuild": "cd backend && npm run build", 
       "build": "cd frontend && npm run build",
-      "postbuild": "ncp frontend/build backend/built/public",
       "build-all": "npm run prebuild && npm run build",
       "start-all": "npm run build-all && npm run start"
   },
