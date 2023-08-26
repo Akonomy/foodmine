@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm install  && ng build --configuration production --output-path build"  },
+    "build": "npm install  && ng build --configuration production"  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.0",
