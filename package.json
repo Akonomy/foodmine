@@ -1,16 +1,16 @@
 {
-    "name": "ako-foodpage",
-    "version": "1.0.0",
-    "scripts": {
-      "start": "cd backend/built && node server.js", 
-      "install-all": "cd backend && npm install && cd ../frontend && npm install",   
-      "prebuild": "cd backend && npm run build", 
-      "build": "cd frontend && npm run build",
-      "build-all": "npm run prebuild && npm run build",
-      "start-all": "npm run build-all && npm run start"
-  },
-    "engines": {
-      "node": ">20.5.6", 
-      "npm": "6.14.15" 
-    }
-}
+      "name": "ako-foodpage",
+      "version": "1.0.0",
+      "scripts": {
+        "start": "cd backend/built && node server.js", 
+        "install-all": "cd backend && npm install && cd ../frontend && npm install",   
+        "prebuild": "cd backend && npm run build", 
+        "build": "cd frontend && npm run build",
+        "build-all": "npm run prebuild && npm run build",
+        "start-all": "npm run build-all && npm run start"
+    },
+      "engines": {
+        "node": ">=14", 
+        "npm": "6.14.15" 
+      }
+  }
