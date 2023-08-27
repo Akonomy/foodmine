@@ -1,11 +1,11 @@
-/* Center align the page content */
+/* Base styles for all screen sizes */
 .cart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  background-color: #232323; /* Dark background color */
-  color: #fff; /* Text color */
+  background-color: #232323;
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -19,14 +19,23 @@ ul {
 
 li {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* For mobile, stack items vertically */
   padding: 1rem;
-  border: 1px solid #444; /* Darker border color */
+  border: 1px solid #444;
   border-radius: 8px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slightly darker box-shadow */
-  background-color: #333; /* Dark background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+}
+
+/* Styles for larger screens (e.g., tablets and desktops) */
+@media screen and (min-width: 768px) {
+  li {
+    flex-direction: row; /* For larger screens, align items horizontally */
+  }
+  .remove_button {
+    margin-left: 10px; /* Add spacing between remove button and content */
+  }
 }
 
 li img {
@@ -38,16 +47,16 @@ li img {
 
 li a {
   text-decoration: none;
-  color: #fff; /* Text color */
+  color: #fff;
 }
 
 select {
   padding: 5px;
   font-size: 14px;
-  border: 1px solid #444; /* Darker border color */
+  border: 1px solid #444;
   border-radius: 4px;
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Text color */
+  background-color: #333;
+  color: #fff;
 }
 
 .remove_button {
@@ -66,20 +75,34 @@ select {
 
 .checkout-container {
   display: flex;
+  flex-direction: column; /* Stack content vertically for mobile */
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   padding: 10px;
-  background-color: #232323; /* Dark background color */
+  background-color: #232323;
   border-radius: 8px;
   width: 100%;
+}
+
+/* Styles for larger screens (e.g., tablets and desktops) */
+@media screen and (min-width: 768px) {
+  .checkout-container {
+    flex-direction: row; /* For larger screens, align items horizontally */
+  }
+  .food-count,
+  .total-price {
+    margin: 0; /* Remove margins for mobile */
+  }
 }
 
 .food-count,
 .total-price {
   font-size: 18px;
   font-weight: bold;
-  color: #fff; /* Text color */
+  color: #fff;
+  text-align: center; /* Center text for mobile */
+  margin-bottom: 10px; /* Add spacing between counts and buttons for mobile */
 }
 
 .checkout-container a {
@@ -111,7 +134,7 @@ select {
 .food-name {
   font-size: 18px;
   font-weight: bold;
-  color: #fff; /* Text color */
+  color: #fff;
   text-decoration: none;
 }
 
@@ -122,43 +145,40 @@ select {
 .quantity label {
   font-size: 14px;
   font-weight: bold;
-  color: #ddd; /* Lighter text color */
+  color: #ddd;
   margin-right: 5px;
 }
 
 .quantity select {
   padding: 5px;
   font-size: 14px;
-  border: 1px solid #444; /* Darker border color */
+  border: 1px solid #444;
   border-radius: 4px;
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Text color */
+  background-color: #333;
+  color: #fff;
 }
 
-/* Apply styles to the input container */
 .input-container {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-/* Style the input element */
 .input-container input[type="number"] {
   width: 50px;
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #444; /* Darker border color */
+  border: 1px solid #444;
   border-radius: 4px;
   flex-grow: 1;
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Text color */
+  background-color: #333;
+  color: #fff;
 }
 
-/* Add some margin to the quantity label */
 .input-container p {
   margin-left: 10px;
   font-size: 16px;
-  color: #ddd; /* Lighter text color */
+  color: #ddd;
 }
 
 .empty-cart-message {
@@ -166,13 +186,12 @@ select {
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: #232323; /* Dark background color */
-  border: 1px solid #444; /* Darker border color */
+  background-color: #232323;
+  border: 1px solid #444;
   border-radius: 5px;
   font-size: 18px;
-  color: #ddd; /* Lighter text color */
+  color: #ddd;
 }
-
 
 .background {
   position: fixed;
@@ -180,6 +199,6 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #334455; /* Background color */
-  z-index: -1; /* Place it behind other elements */
+  background-color: #334455;
+  z-index: -1;
 }
