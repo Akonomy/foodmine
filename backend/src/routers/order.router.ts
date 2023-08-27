@@ -58,9 +58,9 @@ router.get('/order/:id', asyncHandler( async (req, res) => {
 }))
 
 
-router.get('/userOrders/:userId', asyncHandler(async (req, res) => {
+router.get('/user/:userId', asyncHandler(async (req, res) => {
     const orders = await getAllOrdersForUserId(req.params.userId);
-    res.send(orders);
+    res.send(orders);   
 }));
 
 
