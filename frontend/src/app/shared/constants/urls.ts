@@ -1,7 +1,7 @@
 import { environment } from "src/environments/environment";
 
 
-const BASE_URL = environment.production ? '' : 'http://localhost:10000/';
+const BASE_URL = "";
 
 
 export const FOODS_URL = `${BASE_URL}api/foods`;
