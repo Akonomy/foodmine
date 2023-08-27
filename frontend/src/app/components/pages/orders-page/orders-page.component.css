@@ -49,12 +49,6 @@ h2 {
 }
 
 
-body {
- 
-    background-color: rgb(4, 22, 22);
-}
-
-
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
     .order-item {
