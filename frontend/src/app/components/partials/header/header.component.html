@@ -1,4 +1,4 @@
-
+<app-loading></app-loading>
 <header>
     <div class="container">
       <a routerLink="/" class="Logo">Magazin cu mancare</a>
@@ -8,7 +8,7 @@
             <a routerLink="/login">Login</a>
           </li>
           <li *ngIf="isAuth" class="menu-container">
-            <a routerLink="/dashboard">{{user.name}}</a>
+            <a >{{user.name}}</a>
             <div class="menu">
               <a routerLink="/profile">Profile</a>
               <a routerLink="/userOrders/{{ user.id }}">Orders</a>

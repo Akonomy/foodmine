@@ -10,6 +10,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { AuthGuard } from './auth/guards/auth.guard';
 import { OrderPageComponent } from './components/pages/order-page/order-page.component';
 import { OrdersPageComponent } from './components/pages/orders-page/orders-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 const routes: Routes = [
 
@@ -25,6 +26,8 @@ const routes: Routes = [
   {path:'payment-page', component: PaymentPageComponent, canActivate:[AuthGuard]},
   {path:'order/:orderId', component: OrderPageComponent, canActivate:[AuthGuard]},
   {path:'userOrders/:userId', component: OrdersPageComponent, canActivate:[AuthGuard]},
+  {path:"profile",component: ProfilePageComponent,canActivate:[AuthGuard]},
+  
   
   
 ];

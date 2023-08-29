@@ -28,6 +28,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 import { OrderPageComponent } from './components/pages/order-page/order-page.component';
 import { OrdersPageComponent } from './components/pages/orders-page/orders-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 
 
@@ -52,6 +53,7 @@ import { OrdersPageComponent } from './components/pages/orders-page/orders-page.
     PaypalButtonComponent,
     OrderPageComponent,
     OrdersPageComponent,
+    ProfilePageComponent,
     
   ],
   imports: [
