@@ -30,6 +30,10 @@ export class FoodPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  toggleFavorite() {
+    this.food.favorite = !this.food.favorite;
+  }
+
   addToCart() {
     this.cartService.addToCart(this.food);
 

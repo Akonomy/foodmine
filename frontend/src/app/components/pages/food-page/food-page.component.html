@@ -23,9 +23,10 @@ resetLinkText="Back to homepage?">
     <div class="details">
       <div class="header">
         <strong>
-        <span class="name">{{ food.name }}</span>
+        <span class="name">{{ food.name }}    
+          <span  class= "favorite" (click)="toggleFavorite()">{{ food.favorite ? '♥' : '♡' }}</span></span>
         </strong>
-        <span class="favorite {{ food.favorite ? '' : 'not' }}">♥</span>
+
       </div>
       <div class="stars"><ngb-rating [max]="5" [rate]="food.stars" [readonly]="true"></ngb-rating></div>
       <div class="origins">
